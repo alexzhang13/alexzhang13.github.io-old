@@ -24,7 +24,7 @@ Hey! I'm a third year undergraduate student at Princeton University studying com
 <li>I primarily have been working in the <a href="http://nlp.cs.princeton.edu/">Princeton NLP</a> group, and I am fortunate enough to be advised by Professor <a href="https://www.cs.princeton.edu/~karthikn/">Karthik Narasimhan</a>, Dr. <a href="https://machineslearner.com">Khanh Nguyen</a>, and Professor <a href="https://www.cs.princeton.edu/~li/">Kai Li</a>. 
 </li>
 
-<li>I also co-founded and run <a href="https://relaxed-daffodil-275825.netlify.app">AI@Princeton</a>, the undergraduate AI student organization at Princeton, where I have lectured on dozens of topics including large language models, diffusion models and generative AI, machine learning theory, and GPU/TPU processors. </li>
+<li>I also co-founded and run <a href="https://649ce9a71da6461d9675c00b--teal-crisp-90a2e5.netlify.app">AI@Princeton</a>, the undergraduate AI student organization at Princeton, where I have lectured on dozens of topics including large language models, diffusion models and generative AI, machine learning theory, and GPU/TPU processors. </li>
 
 </ul>
 
