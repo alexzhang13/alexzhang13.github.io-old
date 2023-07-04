@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Starting working @ AI stealth startup!
+Started working @ stealth startup on some zany generative AI stuff!
