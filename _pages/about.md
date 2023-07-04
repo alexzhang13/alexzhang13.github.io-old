@@ -28,6 +28,6 @@ Hey! I'm a third year undergraduate student at Princeton University studying com
 
 </ul>
 
-Feel free to reach out to talk through my email at [x]@princeton.edu where [x]=alzhang.
+I've also been trying to keep track of my notes and papers I've read in the past on certain subjects. For now, I've been keeping a list of papers on [World Models](https://github.com/alexzhang13/world-models-papers/). Feel free to reach out to talk through my email at [x]@princeton.edu where [x]=alzhang.
 
 <em>otherwise, i'm still grinding sidequests in [xenoblade 1](https://en.wikipedia.org/wiki/Xenoblade_Chronicles_(video_game))... </em>
