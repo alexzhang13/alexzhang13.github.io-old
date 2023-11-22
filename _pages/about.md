@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: 3rd Year Undergrad at Princeton University
+subtitle: 4th Year Undergrad at Princeton University
 profile:
   align: right
   image: Alex_Zhang_2024.jpg
@@ -18,7 +18,7 @@ selected_papers: false # includes a list of papers marked as "selected={true}"
 social: false  # includes social icons at the bottom of the page
 ---
 
-Hey! I'm a third year undergraduate student at Princeton University studying computer science and math. My research interests center around discovering techniques for <b>grounding agent behavior in different data modalities</b> (e.g. language, visual) to create more reliable, interpretable, and less data hungry AI models.
+Hey! I'm a fourth year undergraduate student at Princeton University studying computer science and math. My research interests center around discovering techniques for <b>grounding agent behavior in different data modalities</b> (e.g. language, visual) to create more reliable, interpretable, and less data hungry AI models.
 
 <ul>
 <li>I primarily have been working in the <a href="http://nlp.cs.princeton.edu/">Princeton NLP</a> group, and I am fortunate enough to be advised by Professor <a href="https://www.cs.princeton.edu/~karthikn/">Karthik Narasimhan</a>, Dr. <a href="https://machineslearner.com">Khanh Nguyen</a>, and Professor <a href="https://www.cs.princeton.edu/~li/">Kai Li</a>. 
@@ -28,6 +28,6 @@ Hey! I'm a third year undergraduate student at Princeton University studying com
 
 </ul>
 
-I've also recently been trying to keep track of my notes and papers I've read in the past. For now, I've been keeping a list of papers on [World Models](https://github.com/alexzhang13/world-models-papers/). Feel free to reach out to talk through my email at [x]@princeton.edu where [x]=alzhang.
+I've also recently been trying to keep track of my notes and papers I've read in the past. For now, I've been keeping a list of papers on [World Models](https://github.com/alexzhang13/world-models-papers/). Feel free to reach out to talk through my email at [x]@princeton.edu where [x]=alzhang. 
 
 <em>otherwise, i'm still grinding sidequests in [xenoblade 1](https://en.wikipedia.org/wiki/Xenoblade_Chronicles_(video_game))... </em>
