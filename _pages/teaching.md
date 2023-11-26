@@ -82,10 +82,32 @@ nav_order: 5
         <br>
     </td>
     <td>
+        <span style="font-weight: bold; color:blue">cos375&nbsp;&nbsp;</span>
+    </td>
+    <td>
+        Computer Architecture <span style="font-size: 10pt; font-style: italic;">taught by David August</span>
+    </td>
+</tr>
+<tr>
+    <td>
+        <br>
+    </td>
+    <td>
         <span style="font-weight: bold; color:orange">cos418&nbsp;&nbsp;</span>
     </td>
     <td>
         Distributed Systems <span style="font-size: 10pt; font-style: italic;">taught by Wyatt Lloyd</span>
+    </td>
+</tr>
+<tr>
+    <td>
+        <br>
+    </td>
+    <td>
+        <span style="font-weight: bold; color:blue">cos434&nbsp;&nbsp;</span>
+    </td>
+    <td>
+        Theoretical Machine Learning <span style="font-size: 10pt; font-style: italic;">taught by Chi Jin</span>
     </td>
 </tr>
 <tr>
@@ -108,6 +130,17 @@ nav_order: 5
     </td>
     <td>
         Computational Geometry <span style="font-size: 10pt; font-style: italic;">taught by Bernard Chazelle</span>
+    </td>
+</tr>
+<tr>
+    <td>
+        <br>
+    </td>
+    <td>
+        <span style="font-weight: bold; color:blue">*cos514&nbsp;&nbsp;</span>
+    </td>
+    <td>
+        Fundamentals of Deep Learning (Theory) <span style="font-size: 10pt; font-style: italic;">taught by Sanjeev Arora</span>
     </td>
 </tr>
 <tr>
@@ -225,6 +258,17 @@ nav_order: 5
     </td>
     <td>
         Probability and Stochastic Systems <span style="font-size: 10pt; font-style: italic;">taught by Ramon van Handel</span>
+    </td>
+</tr>
+<tr>
+    <td>
+        <br>
+    </td>
+    <td>
+        <span style="font-weight: bold; ">orf526&nbsp;&nbsp;</span>
+    </td>
+    <td>
+        Probability Theory <span style="font-size: 10pt; font-style: italic;">taught by Elizabeth Rebrova</span>
     </td>
 </tr>
 <tr>
