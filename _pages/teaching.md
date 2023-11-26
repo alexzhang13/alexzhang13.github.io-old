@@ -104,7 +104,7 @@ nav_order: 5
         <br>
     </td>
     <td>
-        <span style="font-weight: bold; color:blue">cos434&nbsp;&nbsp;</span>
+        <span style="font-weight: bold; color:orange">cos434&nbsp;&nbsp;</span>
     </td>
     <td>
         Theoretical Machine Learning <span style="font-size: 10pt; font-style: italic;">taught by Chi Jin</span>
@@ -137,7 +137,7 @@ nav_order: 5
         <br>
     </td>
     <td>
-        <span style="font-weight: bold; color:blue">*cos514&nbsp;&nbsp;</span>
+        <span style="font-weight: bold; color:red">*cos514&nbsp;&nbsp;</span>
     </td>
     <td>
         Fundamentals of Deep Learning (Theory) <span style="font-size: 10pt; font-style: italic;">taught by Sanjeev Arora</span>
