@@ -265,7 +265,7 @@ nav_order: 5
         <br>
     </td>
     <td>
-        <span style="font-weight: bold; ">orf526&nbsp;&nbsp;</span>
+        <span style="font-weight: bold; ">*orf526&nbsp;&nbsp;</span>
     </td>
     <td>
         Probability Theory <span style="font-size: 10pt; font-style: italic;">taught by Elizabeth Rebrova</span>
