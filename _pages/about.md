@@ -24,7 +24,7 @@ Hey! I'm a fourth year undergraduate student at Princeton University studying co
 <li>I primarily have been working in the <a href="http://nlp.cs.princeton.edu/">Princeton NLP</a> group (now the <a href="https://pli.princeton.edu"> Princeton Language and Intelligence group </a>), and I am fortunate enough to be advised by Professor <a href="https://www.cs.princeton.edu/~karthikn/">Karthik Narasimhan</a>, Dr. <a href="https://machineslearner.com">Khanh Nguyen</a>, and Professor <a href="https://www.cs.princeton.edu/~li/">Kai Li</a>. 
 </li>
 
-<li>I also co-founded and run <a href="https://649ce9a71da6461d9675c00b--teal-crisp-90a2e5.netlify.app">AI@Princeton</a>, the undergraduate AI student organization at Princeton, where I have lectured on dozens of topics including large language models, diffusion models and generative AI, machine learning theory, and GPU/TPU processors. </li>
+<li>I also <b>co-founded</b> and am the <b>president</b> of <a href="https://ai-house.vercel.app">AI@Princeton</a>, the undergraduate AI student organization at Princeton, where I have lectured on dozens of topics including large language models, diffusion models and generative AI, machine learning theory, and GPU/TPU processors. We also launched and directed the first <a href="https://ai-house.vercel.app/Framework/aitt.html">AI Tiger Trek</a>, where we took 12 passionate Princeton students to San Francisco to meet prominent professors, entrepreneurs, and researchers in the field of AI! </li>
 
 </ul>
 
