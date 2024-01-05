@@ -21,7 +21,7 @@ social: false  # includes social icons at the bottom of the page
 Hey! I'm a fourth year undergraduate student at Princeton University studying computer science and
 math. My research interests center around discovering techniques for <b>grounding agent behavior in
 different data modalities</b> (e.g. language, visual) to create more reliable, interpretable, and
-less data hungry AI models.
+less data hungry AI models. I'm also very interested in <b>efficient training and inference of AI models</b> at a systems-level, particularly for generative models.
 
 <ul> <li>I primarily have been working in the <a href="http://nlp.cs.princeton.edu/">Princeton
 NLP</a> group (now the <a href="https://pli.princeton.edu"> Princeton Language and Intelligence
