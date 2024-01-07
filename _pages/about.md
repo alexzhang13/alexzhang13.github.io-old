@@ -37,11 +37,14 @@ models and generative AI, machine learning theory, and GPU/TPU processors. We al
 directed the first <a href="https://ai-house.vercel.app/Framework/aitt.html">AI Tiger Trek</a>,
 where we took 12 passionate Princeton students to San Francisco to meet prominent professors,
 entrepreneurs, and researchers in the field of AI! </li>
-
 </ul>
+
+I really enjoy teaching, and I've TA'd quite a few courses at Princeton. Currently, I'm the undergraduate course assistant (UCA) creating the assignments for the new <a href="https://ben-eysenbach.github.io/intro-rl/">Intro to Reinforcement Learning (COS435/ECE433)</a> course being taught in Spring 2024 at Princeton.
+
+
 Finally, I'm currently **reading through all 3584 abstracts from NeurIPS 2023** and am compiling a
-post about it.
-I've also recently been trying to keep track of my notes and papers I've read in the past. For now,
+set of notes about it.
+I've generally recently been trying to keep track of my research notes, ideas, and papers I've read in the past. For now,
 I've been keeping a list of papers on [World
 Models](https://github.com/alexzhang13/world-models-papers/). Feel free to reach out to talk through
 my email at [x]@princeton.edu where [x]=alzhang. 
