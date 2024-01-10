@@ -4,7 +4,7 @@ permalink: /coursework/
 title: coursework
 description: List of coursework I've taken / TA'd for at Princeton.
 nav: true
-nav_order: 5
+nav_order: 3
 ---
 
 <p> <em> * indicates graduate coursework </em> </p>
