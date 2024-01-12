@@ -42,7 +42,7 @@ entrepreneurs, and researchers in the field of AI! </li>
 I really enjoy teaching, and I've TA'd quite a few courses at Princeton. Currently, I'm the undergraduate course assistant (UCA) creating the assignments for the new <a href="https://ben-eysenbach.github.io/intro-rl/">Intro to Reinforcement Learning (COS435/ECE433)</a> course being taught in Spring 2024 at Princeton.
 
 
-Finally, I just finished **reading through all 3584 abstracts from NeurIPS 2023** and have compiled my notes <a href="https://alexzhang13.github.io/blog/2024/neurips2023/">here</a>.
+Finally, I just finished **reading through all 3584 abstracts from NeurIPS 2023** and have <a href="https://alexzhang13.github.io/blog/2024/neurips2023/">compiled my notes here</a>.
 I've generally recently been trying to keep track of my research notes, ideas, and papers I've read in the past. For now,
 I've been keeping a list of papers on [World
 Models](https://github.com/alexzhang13/world-models-papers/). Feel free to reach out to talk through

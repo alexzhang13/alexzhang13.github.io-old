@@ -4,10 +4,10 @@ permalink: /coursework/
 title: coursework
 description: List of coursework I've taken / TA'd for at Princeton.
 nav: true
-nav_order: 3
+nav_order: 5
 ---
 
-<p> <em> * indicates graduate coursework </em> </p>
+<p> <em> * indicates graduate coursework, &Dagger; indicates A+ grade </em> </p>
 <h3>computer science</h3>
 <table>
 <tbody>
@@ -17,6 +17,8 @@ nav_order: 3
     </td>
     <td>
         <span style="font-weight: bold; color:green">cos217&nbsp;&nbsp;</span>
+    </td>
+    <td>
     </td>
     <td>
         Introduction to Programming Systems <span style="font-size: 10pt; font-style: italic;">taught by Szymon Rusinkiewicz</span>
@@ -30,6 +32,8 @@ nav_order: 3
         <span style="font-weight: bold; color:green">cos226&nbsp;&nbsp;</span>
     </td>
     <td>
+    </td>
+    <td>
         Algorithms and Data Structures <span style="font-size: 10pt; font-style: italic;">taught by Kevin Wayne</span>
     </td>
 </tr>
@@ -38,10 +42,12 @@ nav_order: 3
         <br>
     </td>
     <td>
-        <span style="font-weight: bold; color:blue">cos324&nbsp;&nbsp;</span>
+        <span style="font-weight: bold; color:blue">cos324 &Dagger;&nbsp;&nbsp; </span> 
     </td>
     <td>
-        Introduction to Machine Learning <span style="font-size: 10pt; font-style: italic;">taught by Sanjeev Arora and Danqi Chen</span>
+    </td>
+    <td>
+        Introduction to Machine Learning  <span style="font-size: 10pt; font-style: italic;">taught by Sanjeev Arora and Danqi Chen</span>
     </td>
 </tr>
 <tr>
@@ -50,6 +56,8 @@ nav_order: 3
     </td>
     <td>
         <span style="font-weight: bold; color:blue">cos326&nbsp;&nbsp;</span>
+    </td>
+    <td>
     </td>
     <td>
         Functional Programming <span style="font-size: 10pt; font-style: italic;">taught by Andrew Appel</span>
@@ -63,6 +71,8 @@ nav_order: 3
         <span style="font-weight: bold; color:blue">cos333&nbsp;&nbsp;</span>
     </td>
     <td>
+    </td>
+    <td>
         Advanced Programming Techniques <span style="font-size: 10pt; font-style: italic;">taught by Robert Dondero</span>
     </td>
 </tr>
@@ -72,6 +82,8 @@ nav_order: 3
     </td>
     <td>
         <span style="font-weight: bold; color:blue">cos340&nbsp;&nbsp;</span>
+    </td>
+    <td>
     </td>
     <td>
         Reasoning about Computation (Discrete Math) <span style="font-size: 10pt; font-style: italic;">taught by Ran Raz</span>
@@ -85,6 +97,8 @@ nav_order: 3
         <span style="font-weight: bold; color:blue">cos375&nbsp;&nbsp;</span>
     </td>
     <td>
+    </td>
+    <td>
         Computer Architecture <span style="font-size: 10pt; font-style: italic;">taught by David August</span>
     </td>
 </tr>
@@ -94,6 +108,8 @@ nav_order: 3
     </td>
     <td>
         <span style="font-weight: bold; color:orange">cos418&nbsp;&nbsp;</span>
+    </td>
+    <td>
     </td>
     <td>
         Distributed Systems <span style="font-size: 10pt; font-style: italic;">taught by Wyatt Lloyd</span>
@@ -107,6 +123,8 @@ nav_order: 3
         <span style="font-weight: bold; color:orange">cos434&nbsp;&nbsp;</span>
     </td>
     <td>
+    </td>
+    <td>
         Theoretical Machine Learning <span style="font-size: 10pt; font-style: italic;">taught by Chi Jin</span>
     </td>
 </tr>
@@ -118,6 +136,8 @@ nav_order: 3
         <span style="font-weight: bold; color:orange">cos445&nbsp;&nbsp;</span>
     </td>
     <td>
+    </td>
+    <td>
         Economics in Computing (CS Theory) <span style="font-size: 10pt; font-style: italic;">taught by Matthew Weinberg</span>
     </td>
 </tr>
@@ -126,7 +146,9 @@ nav_order: 3
         <br>
     </td>
     <td>
-        <span style="font-weight: bold; color:orange">cos451&nbsp;&nbsp;</span>
+        <span style="font-weight: bold; color:orange">cos451 &Dagger;&nbsp;&nbsp;</span>
+    </td>
+    <td>
     </td>
     <td>
         Computational Geometry <span style="font-size: 10pt; font-style: italic;">taught by Bernard Chazelle</span>
@@ -137,7 +159,9 @@ nav_order: 3
         <br>
     </td>
     <td>
-        <span style="font-weight: bold; color:red">*cos514&nbsp;&nbsp;</span>
+        <span style="font-weight: bold; color:red">*cos514 &Dagger;&nbsp;&nbsp;</span>
+    </td>
+    <td>
     </td>
     <td>
         Fundamentals of Deep Learning (Theory) <span style="font-size: 10pt; font-style: italic;">taught by Sanjeev Arora</span>
@@ -148,7 +172,9 @@ nav_order: 3
         <br>
     </td>
     <td>
-        <span style="font-weight: bold; color:red">*cos521&nbsp;&nbsp;</span>
+        <span style="font-weight: bold; color:red">*cos521 &Dagger;&nbsp;&nbsp;</span>
+    </td>
+    <td>
     </td>
     <td>
         Advanced Algorithm Design <span style="font-size: 10pt; font-style: italic;">taught by Matthew Weinberg</span>
@@ -162,6 +188,8 @@ nav_order: 3
         <span style="font-weight: bold; color:red">*cos526&nbsp;&nbsp;</span>
     </td>
     <td>
+    </td>
+    <td>
         Neural Rendering <span style="font-size: 10pt; font-style: italic;">taught by Felix Heide</span>
     </td>
 </tr>
@@ -170,7 +198,9 @@ nav_order: 3
         <br>
     </td>
     <td>
-        <span style="font-weight: bold; color:red">*cos598d&nbsp;&nbsp;</span>
+        <span style="font-weight: bold; color:red">*cos598d &Dagger;&nbsp;&nbsp;</span>
+    </td>
+    <td>
     </td>
     <td>
         Systems in Machine Learning <span style="font-size: 10pt; font-style: italic;">taught by Kai Li</span>
@@ -182,6 +212,8 @@ nav_order: 3
     </td>
     <td>
         <span style="font-weight: bold; color:red">*ece524&nbsp;&nbsp;</span>
+    </td>
+    <td>
     </td>
     <td>
         Foundations of Reinforcement Learning [sat in] <span style="font-size: 10pt; font-style: italic;">taught by Chi Jin</span>
@@ -265,7 +297,7 @@ nav_order: 3
         <br>
     </td>
     <td>
-        <span style="font-weight: bold; ">*orf526&nbsp;&nbsp;</span>
+        <span style="font-weight: bold; color:red">*orf526&nbsp;&nbsp;</span>
     </td>
     <td>
         Probability Theory <span style="font-size: 10pt; font-style: italic;">taught by Elizabeth Rebrova</span>
@@ -342,6 +374,17 @@ nav_order: 3
     </td>
     <td>
         Economics in Computing - Grader <span style="font-size: 10pt; font-style: italic;">spring 2022</span>
+    </td>
+</tr>
+<tr>
+    <td>
+        <br>
+    </td>
+    <td>
+        <span style="font-weight: bold;">cos435&nbsp;&nbsp;</span>
+    </td>
+    <td>
+        Introduction to Reinforcement Learning - Undergraduate Course Assistant <span style="font-size: 10pt; font-style: italic;">spring 2024</span>
     </td>
 </tr>
 </tbody>
