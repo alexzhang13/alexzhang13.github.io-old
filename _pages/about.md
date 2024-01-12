@@ -28,7 +28,7 @@ href="https://www.cs.princeton.edu/~li/">Kai Li</a>. </li>
 
 <li>I also <b>co-founded</b> and am the <b>president</b> of <a
 href="https://ai-house.vercel.app">AI@Princeton</a>, the undergraduate AI student organization at
-Princeton and helped launch the first <a href="https://ai-house.vercel.app/Framework/aitt.html">AI Tiger Trek</a>. </li>
+Princeton. I also helped organize the first <a href="https://ai-house.vercel.app/Framework/aitt.html">AI Tiger Trek</a>. </li>
 </ul>
 
 I really enjoy teaching, and I've TA'd quite a few courses at Princeton. Currently, I'm the undergraduate course assistant (UCA) creating the assignments for the new <a href="https://ben-eysenbach.github.io/intro-rl/">Intro to Reinforcement Learning (COS435/ECE433)</a> course being taught in Spring 2024 at Princeton.
