@@ -10,32 +10,29 @@ horizontal: false
 ---
 
 <!-- pages/projects.md -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 <div class="projects">
 <h4>AI/ML</h4>
 <ul>
 <li> 
-        <a href="https://alexzhang13.github.io/assets/pdfs/Reward_Shaping_LLM.pdf">A Simple Framework for Intrinsic Reward-Shaping for Reinforcement Learning using LLM Feedback</a>
-        <p style="margin-left: 25px;">
-        Using large language models to generate reward function code to improve sample efficiency and inject external wiki knowledge into reinforcement learning algorithms. Run a simple set of downstream experiments on Pokemon Showdown. 
-        </p>
+        <a href="https://alexzhang13.github.io/assets/pdfs/Reward_Shaping_LLM.pdf">A Simple Framework for Intrinsic Reward-Shaping for Reinforcement Learning using LLM Feedback</a> <a href="https://github.com/alexzhang13/reward-shaping-rl"><i class="fa fa-github" style="font-size:18px"></i></a>
 </li>
 <li> 
-        <a href="https://alexzhang13.github.io/assets/pdfs/Pruning_KMatrix_AZ.pdf">Pruning Methods with Sparse Factorizations of Neural Networks</a>
-        <p style="margin-left: 25px;">
-        Examining known pre-initialization pruning methods with <a href="https://dawn.cs.stanford.edu/2019/06/13/butterfly/">Butterfly Matrix</a> layers and the effect on memory reduction and model inference speed.
-        </p>
+        <a href="https://alexzhang13.github.io/assets/pdfs/Pruning_KMatrix_AZ.pdf">Pruning Methods with Sparse Factorizations of Neural Networks</a> <a href="https://github.com/alexzhang13/COS598D-Pruning"><i class="fa fa-github" style="font-size:18px"></i></a>
 </li>
 <li> 
-        <a href="https://arxiv.org/abs/2311.11427">Appearance Codes using Joint Embedding Learning of Multiple Modalities</a>
-        <p style="margin-left: 25px;">
-        Neat method for avoiding inference-time compute of appearance codes. We use small VAEs to learn these embeddings, but the method can easily be extended given a larger compute budget to more modern neural rendering methods.
-        </p>
+        <a href="https://arxiv.org/abs/2311.11427">Appearance Codes using Joint Embedding Learning of Multiple Modalities</a> <a href="https://github.com/edogariu/alex-zhang"><i class="fa fa-github" style="font-size:18px"></i></a>
 </li>
 <li>
         <a href="https://alexzhang13.github.io/assets/pdfs/Futures.pdf"> 
-        Predicting Visual Futures with Image Captioning and Pre-Trained Language Models </a> 
-        <p style="margin-left: 25px;">
-        Freshman year research on leveraging image captioning model in a visual prediction task in the PNLP lab that was ultimately canned.
+        Predicting Visual Futures with Image Captioning and Pre-Trained Language Models </a>  <a href="https://github.com/alexzhang13/image-gail"><i class="fa fa-github" style="font-size:18px"></i></a>
+</li>
+<li>
+        <a href="https://ieeexplore.ieee.org/abstract/document/9660564"> 
+        Developing a Device-Independent Software for Adaptive Tremor Suppression Orthoses </a>  <a href="https://github.com/alexzhang13/TremorWear_Env"><i class="fa fa-github" style="font-size:18px"></i></a>
+        <p style="margin-left:25px">
+        - Intel International Science and Engineering Fair (ISEF) 2019 - 2nd Place
         </p>
 </li>
 
@@ -45,15 +42,17 @@ horizontal: false
 <li>
 <a href="https://arxiv.org/abs/2302.06769">Transaction Fee Mining and Mechanism Design</a>
 </li>
-<p style="margin-left: 25px;">
-Survey paper on incentive compatibility in transaction fee schemes on the blockchain and known transaction fee mechanisms. 
-</p>
 
 <li>
         <a href="https://alexzhang13.github.io/assets/pdfs/No_Clone_Theorem.pdf">Quantum Information Theory and the No-Cloning Theorem</a>
         </li>
-        <p style="margin-left: 25px;">
-        Basic tensor product proof of no-cloning theorem in Quantum Information Theory using tools from linear algebra.
-</p>
  </ul>
 </div>
+
+<h4>Other</h4>
+<ul>
+        <li>
+        <a href="https://alexzhang13.github.io/assets/pdfs/AlexBot.pdf"> 
+        SLAM for Maze Navigation on Raspberry Pi Robot </a>  <a href="https://github.com/alexzhang13/rcj-code"><i class="fa fa-github" style="font-size:18px"></i></a>
+</li>
+</ul>
