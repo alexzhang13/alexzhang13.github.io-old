@@ -340,7 +340,7 @@ nav_order: 5
         <span style="font-weight: bold;">cos226&nbsp;&nbsp;</span>
     </td>
     <td>
-        Algorithms and Data Structures - Precept Assistant <span style="font-size: 10pt; font-style: italic;">fall, spring 2021</span>
+        Algorithms and Data Structures - Precept Assistant <span style="font-size: 10pt; font-style: italic;">fall 2021, spring 2022</span>
     </td>
 </tr>
 <tr>
@@ -373,7 +373,7 @@ nav_order: 5
         <span style="font-weight: bold;">cos445&nbsp;&nbsp;</span>
     </td>
     <td>
-        Economics in Computing - Grader <span style="font-size: 10pt; font-style: italic;">spring 2022</span>
+        Economics in Computing - Grader <span style="font-size: 10pt; font-style: italic;">spring 2023</span>
     </td>
 </tr>
 <tr>
@@ -381,7 +381,7 @@ nav_order: 5
         <br>
     </td>
     <td>
-        <span style="font-weight: bold;">cos435&nbsp;&nbsp;</span>
+        <span style="font-weight: bold;">ece433/cos435&nbsp;&nbsp;</span>
     </td>
     <td>
         Introduction to Reinforcement Learning - Undergraduate Course Assistant <span style="font-size: 10pt; font-style: italic;">spring 2024</span>

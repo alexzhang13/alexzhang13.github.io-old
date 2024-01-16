@@ -12,9 +12,9 @@ profile:
   #   <p>123 your address street</p>
   #   <p>Your City, State 12345</p>
 
+latest_posts: true  # includes a list of the newest posts
+selected_papers: true # includes a list of papers marked as "selected={true}"
 news: true  # includes a list of news items
-latest_posts: false  # includes a list of the newest posts
-selected_papers: false # includes a list of papers marked as "selected={true}"
 social: false  # includes social icons at the bottom of the page
 ---
 
@@ -31,7 +31,7 @@ href="https://ai-house.vercel.app">AI@Princeton</a>, the undergraduate AI studen
 Princeton. I also helped organize the first <a href="https://ai-house.vercel.app/Framework/aitt.html">AI Tiger Trek</a>. </li>
 </ul>
 
-I really enjoy teaching, and I've TA'd quite a few courses at Princeton. Currently, I'm the undergraduate course assistant (UCA) creating the assignments for the new <a href="https://ben-eysenbach.github.io/intro-rl/">Intro to Reinforcement Learning (COS435/ECE433)</a> course being taught in Spring 2024 at Princeton.
+<!-- I really enjoy teaching, and I've TA'd quite a few courses at Princeton. Currently, I'm the undergraduate course assistant (UCA) creating the assignments for the new <a href="https://ben-eysenbach.github.io/intro-rl/">Intro to Reinforcement Learning (COS435/ECE433)</a> course being taught in Spring 2024 at Princeton. -->
 
 
 Finally, I just finished **reading through all 3584 abstracts from NeurIPS 2023** and have <a href="https://alexzhang13.github.io/blog/2024/neurips2023/">compiled my notes here</a>.
