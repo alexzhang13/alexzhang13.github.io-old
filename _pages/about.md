@@ -19,7 +19,7 @@ social: false  # includes social icons at the bottom of the page
 ---
 
 Hey! I'm a fourth year undergraduate student at Princeton University studying computer science and
-math. Right now, I'm particularly interested in understanding <b><a>grounding</a> and <a href="https://arxiv.org/abs/2302.04449">guiding</a> agent behavior in different data modalities</b> to create more reliable, interpretable, and less data hungry AI models. I'm also very interested in <b>efficient <a href="https://arxiv.org/abs/2205.14135">training</a> and <a href="https://arxiv.org/abs/2302.01318">inference</a> of AI models</b> at a systems-level, particularly for generative models.
+math. Right now, I'm particularly interested in understanding <b><a href="https://arxiv.org/abs/2311.17593">grounding</a> and <a href="https://arxiv.org/abs/2302.04449">guiding</a> agent behavior in different data modalities</b> to create more reliable, interpretable, and less data hungry AI models. I'm also very interested in <b>efficient <a href="https://arxiv.org/abs/2205.14135">training</a> and <a href="https://arxiv.org/abs/2302.01318">inference</a> of AI models</b> at a systems-level, particularly for generative models.
 
 <ul> <li>I am fortunate enough to be advised by Professor <a
 href="https://www.cs.princeton.edu/~karthikn/">Karthik Narasimhan</a>, Dr. <a
