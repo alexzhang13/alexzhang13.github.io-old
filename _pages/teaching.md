@@ -42,6 +42,19 @@ nav_order: 5
         <br>
     </td>
     <td>
+        <span style="font-weight: bold; color:blue">cos320 &Dagger;&nbsp;&nbsp; </span> 
+    </td>
+    <td>
+    </td>
+    <td>
+        Compiling Techniques  <span style="font-size: 10pt; font-style: italic;">taught by Zachary Kincaid</span>
+    </td>
+</tr>
+<tr>
+    <td>
+        <br>
+    </td>
+    <td>
         <span style="font-weight: bold; color:blue">cos324 &Dagger;&nbsp;&nbsp; </span> 
     </td>
     <td>
@@ -301,6 +314,17 @@ nav_order: 5
     </td>
     <td>
         Probability Theory <span style="font-size: 10pt; font-style: italic;">taught by Elizabeth Rebrova</span>
+    </td>
+</tr>
+<tr>
+    <td>
+        <br>
+    </td>
+    <td>
+        <span style="font-weight: bold; color:red">*orf550&nbsp;&nbsp;</span>
+    </td>
+    <td>
+        Topics in Probability: Probability in High Dimension <span style="font-size: 10pt; font-style: italic;">taught by Ramon van Handel</span>
     </td>
 </tr>
 <tr>
