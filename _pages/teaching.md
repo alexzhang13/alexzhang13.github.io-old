@@ -387,5 +387,17 @@ nav_order: 5
         Introduction to Reinforcement Learning - Undergraduate Course Assistant <span style="font-size: 10pt; font-style: italic;">spring 2024</span>
     </td>
 </tr>
+
+<tr>
+    <td>
+        <br>
+    </td>
+    <td>
+        <span style="font-weight: bold;">mat217&nbsp;&nbsp;</span>
+    </td>
+    <td>
+        Honors Linear Algebra (Axler) - Undergraduate Course Assistant <span style="font-size: 10pt; font-style: italic;">spring 2024</span>
+    </td>
+</tr>
 </tbody>
 </table>
