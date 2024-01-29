@@ -42,7 +42,7 @@ nav_order: 5
         <br>
     </td>
     <td>
-        <span style="font-weight: bold; color:blue">cos320 &Dagger;&nbsp;&nbsp; </span> 
+        <span style="font-weight: bold; color:blue">cos320 &nbsp;&nbsp; </span> 
     </td>
     <td>
     </td>
