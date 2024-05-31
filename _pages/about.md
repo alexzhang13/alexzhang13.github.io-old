@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: 4th Year Undergrad at Princeton University
+subtitle: (Just) Graduated at Princeton University '24
 profile:
   align: right
   image: Alex_Zhang_2024.jpg
@@ -18,8 +18,10 @@ news: true  # includes a list of news items
 social: false  # includes social icons at the bottom of the page
 ---
 
-Hey! I'm a fourth year undergraduate student at Princeton University studying computer science and
-math. Right now, I'm particularly interested in understanding <b><a href="https://arxiv.org/abs/2311.17593">grounding</a> and <a href="https://arxiv.org/abs/2302.04449">guiding</a> agent behavior in different data modalities</b> to create more reliable, interpretable, and less data hungry AI models. I'm also very interested in <b>efficient <a href="https://arxiv.org/abs/2205.14135">training</a> and <a href="https://arxiv.org/abs/2302.01318">inference</a> of AI models</b> at a systems-level, particularly for generative models.
+Hey! I recently graduated from Princeton University studying computer science and
+math. There, I received the <a href="https://www.cs.princeton.edu/news/class-day-department-celebrates-accomplishments-graduates">Phillip Goldman '86 Senior Prize</a> in Computer Science, which is the CS department's highest academic honor awarded to a single student. I was also awarded the Outstanding Senior Thesis Prize for my work on augmenting decision-making agents with language capabilities.
+
+Right now, I'm particularly interested in understanding <b><a href="https://arxiv.org/abs/2311.17593">grounding</a> and <a href="https://arxiv.org/abs/2302.04449">guiding</a> agent behavior in different data modalities</b> to create more reliable, interpretable, and less data hungry AI models. I'm also very interested in <b>efficient <a href="https://arxiv.org/abs/2205.14135">training</a> and <a href="https://arxiv.org/abs/2302.01318">inference</a> of AI models</b> at a systems-level, particularly for generative models.
 
 <ul> <li>I am fortunate enough to be advised by Professor <a
 href="https://www.cs.princeton.edu/~karthikn/">Karthik Narasimhan</a>, Dr. <a
