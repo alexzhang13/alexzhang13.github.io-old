@@ -7,7 +7,7 @@ nav: true
 nav_order: 5
 ---
 
-<p> <em> * indicates graduate coursework, &Dagger; indicates A+ grade </em> </p>
+<p> <em> * indicates graduate coursework</em> </p>
 <h3>computer science</h3>
 <table>
 <tbody>
@@ -55,7 +55,7 @@ nav_order: 5
         <br>
     </td>
     <td>
-        <span style="font-weight: bold; color:blue">cos324 &Dagger;&nbsp;&nbsp; </span> 
+        <span style="font-weight: bold; color:blue">cos324 &nbsp;&nbsp; </span> 
     </td>
     <td>
     </td>
@@ -159,7 +159,7 @@ nav_order: 5
         <br>
     </td>
     <td>
-        <span style="font-weight: bold; color:orange">cos451 &Dagger;&nbsp;&nbsp;</span>
+        <span style="font-weight: bold; color:orange">cos451 &nbsp;&nbsp;</span>
     </td>
     <td>
     </td>
@@ -172,7 +172,7 @@ nav_order: 5
         <br>
     </td>
     <td>
-        <span style="font-weight: bold; color:red">*cos514 &Dagger;&nbsp;&nbsp;</span>
+        <span style="font-weight: bold; color:red">*cos514 &nbsp;&nbsp;</span>
     </td>
     <td>
     </td>
@@ -185,7 +185,7 @@ nav_order: 5
         <br>
     </td>
     <td>
-        <span style="font-weight: bold; color:red">*cos521 &Dagger;&nbsp;&nbsp;</span>
+        <span style="font-weight: bold; color:red">*cos521 &nbsp;&nbsp;</span>
     </td>
     <td>
     </td>
@@ -211,7 +211,7 @@ nav_order: 5
         <br>
     </td>
     <td>
-        <span style="font-weight: bold; color:red">*cos598d &Dagger;&nbsp;&nbsp;</span>
+        <span style="font-weight: bold; color:red">*cos598d &nbsp;&nbsp;</span>
     </td>
     <td>
     </td>
