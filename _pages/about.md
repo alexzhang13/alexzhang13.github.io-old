@@ -28,7 +28,7 @@ href="https://www.cs.princeton.edu/~karthikn/">Karthik Narasimhan</a>, Dr. <a
 href="https://machineslearner.com">Khanh Nguyen</a>, and Professor <a
 href="https://www.cs.princeton.edu/~li/">Kai Li</a>. </li>
 
-<li>I also <b>co-founded</b> and am the <b>president</b> of <a
+<li>I also <b>co-founded</b> and was the <b>president</b> of <a
 href="https://ai-house.vercel.app">AI@Princeton</a>, the undergraduate AI student organization at
 Princeton. I also helped organize the first <a href="https://ai-house.vercel.app/Framework/aitt.html">AI Tiger Trek</a>. </li>
 </ul>
