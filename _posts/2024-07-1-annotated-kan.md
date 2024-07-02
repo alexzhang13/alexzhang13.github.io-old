@@ -140,7 +140,8 @@ In this section, we describe a barebones, minimal KAN model. The goal is to show
 
 ### Preliminaries
 If you're using Colab, you can run the following as if they were code blocks. This implementation is also quite GPU-unfriendly, so a CPU will suffice.
-<d-code block language="python" style="font-size:0.7em">
+
+<d-code block language="python">
 # Code was written in Python 3.11.9, but most usable versions of Python and torch suffice.
 !pip install torch==2.3.1
 !pip install numpy==1.26.4
@@ -150,6 +151,7 @@ If you're using Colab, you can run the following as if they were code blocks. Th
 </d-code>
 
 In an attempt to make this code barebones, I've tried to use as little dependencies as possible. I've also included type annotations for the code.
+
 <d-code block language="python" style="font-size:0.7em">
 # Python libraries
 import os
@@ -168,6 +170,7 @@ from tqdm import tqdm
 </d-code>
 
 The following config file holds some preset hyperparameters described in the paper. Most of these can be changed and may not even apply to a more generic KAN architecture.
+
 <d-code block language="python" style="font-size:0.7em">
 class KANConfig:
     """
