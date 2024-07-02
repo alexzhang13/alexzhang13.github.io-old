@@ -239,12 +239,13 @@ defaults:
 # -----------------------------------------------------------------------------
 
 jekyll-minifier:
-  exclude: ['robots.txt', '_posts/2024-07-1-annotated-kan.md']
+  exclude: ['robots.txt', '_posts/2024-07-1-annotated-kan.md', './']
   preserve_line_breaks: true
   remove_spaces_inside_tags: false   # Default: true
   remove_multi_spaces: false         # Default: true
   remove_comments: false             # Default: true
   remove_intertag_spaces: false      # Default: false
+  remove_http_protocol: true
   uglifier_args:
     harmony: true
 
