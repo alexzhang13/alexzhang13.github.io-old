@@ -240,6 +240,7 @@ defaults:
 
 jekyll-minifier:
   exclude: ['robots.txt', '_posts/2024-07-1-annotated-kan.md']
+  preserve_line_breaks: true
   uglifier_args:
     harmony: true
 
