@@ -239,7 +239,8 @@ defaults:
 # -----------------------------------------------------------------------------
 
 jekyll-minifier:
-  exclude: ['robots.txt', '_posts/2024-07-1-annotated-kan.md', './']
+  exclude: '**.*'
+  # exclude: ['robots.txt', '_posts/2024-07-1-annotated-kan.md', './']
   preserve_line_breaks: true
   remove_spaces_inside_tags: false   # Default: true
   remove_multi_spaces: false         # Default: true
