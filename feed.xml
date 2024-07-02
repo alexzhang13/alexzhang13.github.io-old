@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="https://alexzhang13.github.io/feed.xml" rel="self" type="application/atom+xml"/><link href="https://alexzhang13.github.io/" rel="alternate" type="text/html" hreflang="en"/><updated>2024-07-02T08:08:33+00:00</updated><id>https://alexzhang13.github.io/feed.xml</id><title type="html">blank</title><subtitle>A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
-</subtitle><entry><title type="html">The Annotated Kolmogorov-Arnold Network (KAN)</title><link href="https://alexzhang13.github.io/blog/2024/annotated-kan/" rel="alternate" type="text/html" title="The Annotated Kolmogorov-Arnold Network (KAN)"/><published>2024-07-01T00:00:00+00:00</published><updated>2024-07-01T00:00:00+00:00</updated><id>https://alexzhang13.github.io/blog/2024/annotated-kan</id><content type="html" xml:base="https://alexzhang13.github.io/blog/2024/annotated-kan/"><![CDATA[<p>This post is analogous to and heavily inspired by the <a href="https://nlp.seas.harvard.edu/annotated-transformer/">Annotated Transformer</a> but for KANs. It is fully functional as a standalone notebook, and provides intuition along with the code. Most of the code was written to be easy to follow and to mimic the structure of a standard deep learning model in PyTorch, but some parts like training loops and visualization code were adapted from the <a href="https://github.com/KindXiaoming/pykan">original codebase</a>. We decided to remove some sections from the original paper that were deemed unimportant, and also includes some extra works to motivate future research on these models.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="https://alexzhang13.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://alexzhang13.github.io/" rel="alternate" type="text/html" hreflang="en" /><updated>2024-07-02T08:24:49+00:00</updated><id>https://alexzhang13.github.io/feed.xml</id><title type="html">blank</title><subtitle>A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
+</subtitle><entry><title type="html">The Annotated Kolmogorov-Arnold Network (KAN)</title><link href="https://alexzhang13.github.io/blog/2024/annotated-kan/" rel="alternate" type="text/html" title="The Annotated Kolmogorov-Arnold Network (KAN)" /><published>2024-07-01T00:00:00+00:00</published><updated>2024-07-01T00:00:00+00:00</updated><id>https://alexzhang13.github.io/blog/2024/annotated-kan</id><content type="html" xml:base="https://alexzhang13.github.io/blog/2024/annotated-kan/"><![CDATA[<p>This post is analogous to and heavily inspired by the <a href="https://nlp.seas.harvard.edu/annotated-transformer/">Annotated Transformer</a> but for KANs. It is fully functional as a standalone notebook, and provides intuition along with the code. Most of the code was written to be easy to follow and to mimic the structure of a standard deep learning model in PyTorch, but some parts like training loops and visualization code were adapted from the <a href="https://github.com/KindXiaoming/pykan">original codebase</a>. We decided to remove some sections from the original paper that were deemed unimportant, and also includes some extra works to motivate future research on these models.</p>
 <p>The original paper is titled <a href="https://arxiv.org/abs/2404.19756">“KAN: Kolmogorov-Arnold Networks”</a> <d-cite key="liu2024kankolmogorovarnoldnetworks"></d-cite>, and the authors on this paper are: <strong>Ziming Liu, Yixuan Wang, Sachin Vaidya, Fabian Ruehle, James Halverson, Marin Soljačić, Thomas Y. Hou, and Max Tegmark.</strong></p>
 <h2 id="introduction">Introduction</h2>
 <p>Deep neural networks have been the driving force of developments in AI in the last decade. However, they currently suffer from several known issues such as a lack of interpretability, scaling issues, and data inefficiency – in other words, while they are powerful, they are not a perfect solution.</p>
 <figure>
-<img src="/assets/img/kan2024.jpg" width="400" alt="KAN Teaser Figure"/>
+<img src="/assets/img/kan2024.jpg" width="400" alt="KAN Teaser Figure" />
 <figcaption><center>Teaser figure taken from the original <a href="">KAN paper.</a> <d-cite key="liu2024kankolmogorovarnoldnetworks"></d-cite></center> </figcaption>
 </figure>
 <p>Kolmogorov-Arnold Networks (KANs) are an alternative representation to standard multi-layer perceptrons (MLPs). In short, they parameterize activation functions by re-wiring the “multiplication” in an MLP’s weight matrix-vector multiplication into function application. While KANs are not nearly as provably accomplished as MLPs, they are an exciting prospect for the field of AI and deserve some time for exploration.</p>
@@ -36,7 +36,7 @@ B_{i,\color{red}{j}}(x) &amp;\triangleq \frac{x - t_i}{t_{i+j} - t_i} B_{i,\colo
 \end{aligned}\]
 <p>We can plot an example for the basis functions of a B-spline with $G=5$ grid points of order $k=3$. In other words, the augmented grid size is $G+2k=11$:</p>
 <figure>
-<img src="/assets/img/B-spline.png" width="500" alt="B-spline Basis Functions"/>
+<img src="/assets/img/B-spline.png" width="500" alt="B-spline Basis Functions" />
 <figcaption> <center>Matplotlib plot of B-spline basis functions. Notably, the basis functions, like spline polynomials, are $0$ on most of the domain. But they overlap, unlike for splines. I generated this graph by adapting code from <a href="https://github.com/johntfoster/bspline/">https://github.com/johntfoster/bspline/</a>.</center> </figcaption>
 </figure>
 <p>When implementing B-splines for our KAN, we are not interested in the function $f(\cdot)$ itself, rather we care about efficiently computing the function evaluated at a point $f(x)$. We will later see a nice iterative bottom-up dynamic programming formulation of the Cox-de Boor recursion – I’ve colored the indices red to make it the DP relation clear.</p>
@@ -147,18 +147,18 @@ x_n
 \end{bmatrix}
 =
 \begin{bmatrix}
-\Phi_{1,1}(x_1) + \Phi_{1,2}(x_2) + ... + \Phi_{1,n}(x_n) \\
-\Phi_{2,1}(x_1) + \Phi_{2,2}(x_2) + ... + \Phi_{2,n}(x_n) \\
+\Phi_{1,1}(x_1) + \Phi_{1,2}(x_2) + ... +  \Phi_{1,n}(x_n) \\
+\Phi_{2,1}(x_1) + \Phi_{2,2}(x_2) + ... +  \Phi_{2,n}(x_n) \\
 \vdots \\
-\Phi_{m,1}(x_1) + \Phi_{m,2}(x_2) + ... + \Phi_{m,n}(x_n) \\
+\Phi_{m,1}(x_1) + \Phi_{m,2}(x_2) + ... +  \Phi_{m,n}(x_n) \\
 \end{bmatrix}\]
 <p>The observant reader may notice that this looks exactly like the $Wx$ matrix used in an MLP. In other words, we have to compute and materialize<d-footnote>For convenience sake, we will materialize the matrix of values below all at once. I suspect that, similar to matrix multiplication, there may be a way to avoid materializing the full matrix all at once, but this requires a clever choice of the family of functions for $\Phi$.</d-footnote> each term in the matrix below, then sum along the rows.</p>
 \[\text{The terms we need to compute are }
 \begin{bmatrix}
-\Phi_{1,1}(x_1), \Phi_{1,2}(x_2), ..., \Phi_{1,n}(x_n) \\
+\Phi_{1,1}(x_1), \Phi_{1,2}(x_2), ...,  \Phi_{1,n}(x_n) \\
 \Phi_{2,1}(x_1), \Phi_{2,2}(x_2), ...,\Phi_{2,n}(x_n) \\
 \vdots \\
-\Phi_{m,1}(x_1), \Phi_{m,2}(x_2), ..., \Phi_{m,n}(x_n) \\
+\Phi_{m,1}(x_1), \Phi_{m,2}(x_2), ...,  \Phi_{m,n}(x_n) \\
 \end{bmatrix}\]
 <p>To finish off the abstract KAN layer (remember, we haven’t defined what the learnable activation function is), the authors define each learnable activation function $\Phi_{i,j}(\cdot)$ as a function of a learnable activation function $s_{i,j}(\cdot)$ to add residual connections in the network:</p>
 \[\begin{aligned}
@@ -182,12 +182,12 @@ residual_std: float = 0.1,
 super(WeightedResidualLayer, self).__init__()
 self.univariate_weight = torch.nn.Parameter(
 torch.Tensor(out_dim, in_dim)
-) # w_s in paper
+)  # w_s in paper
 # Residual activation functions
 self.residual_fn = F.silu
 self.residual_weight = torch.nn.Parameter(
 torch.Tensor(out_dim, in_dim)
-) # w_b in paper
+)  # w_b in paper
 self._initialization(residual_std)
 def _initialization(self, residual_std):
 """
@@ -208,10 +208,10 @@ return res + act
 </d-code>
 <p>With these operations laid out in math, we have enough information to write a basic KAN layer by abstracting away the choice of learnable activation \(s_{i,j}(\cdot)\). Note that in the code below, the variables <code class="language-plaintext highlighter-rouge">spline_order</code>, <code class="language-plaintext highlighter-rouge">grid_size</code>, and <code class="language-plaintext highlighter-rouge">grid_range</code> are specific to B-splines as the activation, and are only passed through the constructor. You can ignore them for now. In summary, we will first compute the matrix</p>
 \[\begin{bmatrix}
-s_{1,1}(x_1), s_{1,2}(x_2), ..., s_{1,n}(x_n) \\
+s_{1,1}(x_1), s_{1,2}(x_2), ...,  s_{1,n}(x_n) \\
 s_{2,1}(x_1), s_{2,2}(x_2), ...,s_{2,n}(x_n) \\
 \vdots \\
-s_{m,1}(x_1), s_{m,2}(x_2), ..., s_{m,n}(x_n) \\
+s_{m,1}(x_1), s_{m,2}(x_2), ...,  s_{m,n}(x_n) \\
 \end{bmatrix}\]
 <p>following by the weighted residual across each entry, then we will finally sum along the rows to get our layer output. We also define a <code class="language-plaintext highlighter-rouge">cache()</code> function to store the input vector \(\boldsymbol{x}\) and the \(\Phi \boldsymbol{x}\) matrix to compute regularization terms defined later.</p>
 <d-code block="" language="python" style="font-size:0.7em">
@@ -300,7 +300,7 @@ B_{x}[i][\color{red}{j} \color{black}] &amp;\triangleq \frac{x - t[i]}{t[i+j] - 
 \end{aligned}\]
 <h3 id="computing-the-b-spline-basis-functions">Computing the B-Spline Basis Functions</h3>
 <p><em>The tricky part is writing this in tensor notation</em><d-footnote>I'd recommend drawing this out yourself. It's quite hard to explain without visualizations, but quite simple to reason about. </d-footnote>. We take advantage of broadcasting rules in PyTorch/Numpy to make copies of tensors when needed. Recall that to materialize our activation matrix \(\{s_{i,j}(x_j)\}_{i \in [m], j \in [n]}\) we need to compute the bases for each activation, i.e. \(\{B^{(i,j)}_{h,k} (x_j)\}_{h \in [G+k], i \in [m], j \in [n]}\).</p>
-<p>The following explanation is a bit verbose, so bear with me. Our grid initialization function above generates a rank-3 tensor of shape <code class="language-plaintext highlighter-rouge">(out_dim, in_dim, G+2k+1)</code> while the input $x$ is a rank-2 tensor of shape <code class="language-plaintext highlighter-rouge">(batch_size, in_dim)</code>. We first notice that our grid applies to every input in the batch, so we broadcast it to a rank-4 tensor of shape <code class="language-plaintext highlighter-rouge">(batch_size, out_dim, in_dim, G+2k+1)</code>. For the input $x$, we similarly need a copy for every output dimension and every basis function to evaluate over, giving us the same shape through broadcasting. We can align the <code class="language-plaintext highlighter-rouge">in_dim</code> axis of both the grid and the input because $j$ aligns in $s_{i,j}(x_j)$. The $i$ indexes over the basis functions, or the last dimension of our tensors. We write out the vectorized DP in this form, as we note that we can fix $j$. Finally, we perform DP over our $j$ index based on the recurrence rule, yielding the B-spline basis functions evaluated on each input dimension to be used for each output dimension. This notation may be confusing, but the operation is actually quite simple – I would recommend ignoring the batch dimension and drawing out what you need to do.</p>
+<p>The following explanation is a bit verbose, so bear with me. Our grid initialization function above generates a rank-3 tensor of shape <code class="language-plaintext highlighter-rouge">(out_dim, in_dim, G+2k+1)</code> while the input $x$ is a rank-2 tensor of shape <code class="language-plaintext highlighter-rouge">(batch_size, in_dim)</code>. We first notice that our grid applies to every input in the batch, so we broadcast it to a rank-4 tensor of shape <code class="language-plaintext highlighter-rouge">(batch_size, out_dim, in_dim, G+2k+1)</code>.  For the input $x$, we similarly need a copy for every output dimension and every basis function to evaluate over, giving us the same shape through broadcasting. We can align the <code class="language-plaintext highlighter-rouge">in_dim</code> axis of both the grid and the input because $j$ aligns in $s_{i,j}(x_j)$. The $i$ indexes over the basis functions, or the last dimension of our tensors. We write out the vectorized DP in this form, as we note that we can fix $j$. Finally, we perform DP over our $j$ index based on the recurrence rule, yielding the B-spline basis functions evaluated on each input dimension to be used for each output dimension. This notation may be confusing, but the operation is actually quite simple – I would recommend ignoring the batch dimension and drawing out what you need to do.</p>
 <p><em>tldr; we need to compute something for each element in a batch, for each activation, for each B-spline basis. we can use broadcasting to do this concisely, from the code below</em></p>
 <d-code block="" language="python" style="font-size:0.7em">
 # Helper functions for computing B splines over a grid
@@ -321,7 +321,7 @@ for j in range (1, k + 1):
 n = grid.size(-1) - (j + 1)
 b1 = ((x[:, :, :, :] - grid[:, :, :, :n]) / (grid[:, :, :, j:-1] - grid[:, :, :, :n]))
 b1 = b1 * bases[:, :, :, :-1]
-b2 = ((grid[:, :, :, j+1:] - x[:, :, :, :]) / (grid[:, :, :, j+1:] - grid[:, :, :, 1:n+1]))
+b2 = ((grid[:, :, :, j+1:] - x[:, :, :, :])  / (grid[:, :, :, j+1:] - grid[:, :, :, 1:n+1]))
 b2 = b2 * bases[:, :, :, 1:]
 bases = b1 + b2
 return bases
@@ -396,7 +396,7 @@ return spline
 <p>L1 regularization for a weight matrix \(W\) in an MLP is straightforward – just take the Frobenius norm of the matrix. However, for activation functions, using the parameters of the function are not necessarily a good choice. Instead, the magnitude of the <strong>function evaluated on the data</strong> is used. More formally, suppose we have a batch of inputs \(\{x^{(b)}_1,...,x^{(b)}_n \}_{b \in \mathcal{B}}\) into a KAN layer $\mathcal{K}_{m,n}$. The L1 norm of an activation from input node $j$ to output node $i$ is defined as the absolute value of the mean of that activation on $x_j$, averaged over the batch. In other words,</p>
 \[\|\Phi_{i,j}\|_1 \triangleq \left| \frac{1}{|\mathcal{B}|} \sum_{b=1}^{|\mathcal{B}|} \Phi_{i,j}(x^{(b)}_j) \right|\]
 <p>The L1 norm of the layer is then defined as</p>
-\[\|\Phi\|_1 \triangleq \sum_{j=1}^{n} \sum_{i=1}^{m} \| \Phi_{i,j} \|_1\]
+\[\|\Phi\|_1 \triangleq  \sum_{j=1}^{n} \sum_{i=1}^{m} \| \Phi_{i,j} \|_1\]
 <d-code block="" language="python" style="font-size:0.7em">
 def l1_regularization(model: KAN):
 """
@@ -704,7 +704,7 @@ model(dataset["train_input"])
 plot(model)
 </d-code>
 <figure>
-<img src="/assets/img/example_viz.png" width="400" alt="KAN Visualization"/>
+<img src="/assets/img/example_viz.png" width="400" alt="KAN Visualization" />
 <figcaption><center>Visualizing the activations of a randomly initialized KAN network.</center> </figcaption>
 </figure>
 <h3 id="synthetic-example">Synthetic Example</h3>
@@ -735,7 +735,7 @@ model(dataset["train_input"])
 plot_model(model)
 </d-code>
 <figure>
-<img src="/assets/img/simple_eval.png" width="400" alt="KAN Visualization"/>
+<img src="/assets/img/simple_eval.png" width="400" alt="KAN Visualization" />
 <figcaption><center>Visualizing the activations of a trained KAN network. As expected, the activations learn (affine transformation of) the correct symbolic functions compose to form the original desired function. </center> </figcaption>
 </figure>
 <h2 id="part-iii-kan-specific-optimizations">Part III: KAN-specific Optimizations</h2>
@@ -831,7 +831,7 @@ model(dataset["train_input"])
 plot(model)
 </d-code>
 <figure>
-<img src="/assets/img/grid_extension_2.png" width="400" alt="KAN Grid Extension from 5 to 50"/>
+<img src="/assets/img/grid_extension_2.png" width="400" alt="KAN Grid Extension from 5 to 50" />
 <figcaption><center>You will notice in the generated plot above that the KAN learns the correct function $f(x_1,x_2) = (x_1^3 + x_2^2)$. Grid extending from a grid size of 5 (left) to 50 (right) using least-squares. You can see some poor fitting behavior on the right activation, possibly due to an insufficient spread of data sampled for grid extension. </center> </figcaption>
 </figure>
 <h3 id="activation-pruning">Activation Pruning</h3>
@@ -996,7 +996,7 @@ model(dataset["train_input"])
 plot(model)
 </d-code>
 <figure>
-<img src="/assets/img/fix_activation.jpg" width="400" alt="Fixing the activation function."/>
+<img src="/assets/img/fix_activation.jpg" width="400" alt="Fixing the activation function." />
 <figcaption><center>We learn a [2,1,1] KAN for the function $f(x_1,x_2) = \sin(x_1) + x_2^2$, but we fix the first layer to have symbolic activations using a lambda function. </center> </figcaption>
 </figure>
 <h2 id="part-iv-applied-example">Part IV: Applied Example</h2>
@@ -1087,7 +1087,7 @@ plot_results(results)
   month   = "June",
   url     = "https://alexzhang13.github.io/blog/2024/annotated-kan/"
 }
-</code></pre></div></div>]]></content><author><name>Alex Zhang</name></author><category term="blog"/><category term="annotated"/><category term="ai"/><category term="kan"/><category term="kolmogorov-arnold"/><summary type="html"><![CDATA[An annotated guide to the Kolmogorov-Arnold Network]]></summary></entry><entry><title type="html">Highlights of NeurIPS 2023 from Reading All 3584 Abstracts</title><link href="https://alexzhang13.github.io/blog/2024/neurips2023/" rel="alternate" type="text/html" title="Highlights of NeurIPS 2023 from Reading All 3584 Abstracts"/><published>2024-01-09T00:00:00+00:00</published><updated>2024-01-09T00:00:00+00:00</updated><id>https://alexzhang13.github.io/blog/2024/neurips2023</id><content type="html" xml:base="https://alexzhang13.github.io/blog/2024/neurips2023/"><![CDATA[<h1 id="introduction">Introduction</h1>
+</code></pre></div></div>]]></content><author><name>Alex Zhang</name></author><category term="blog" /><category term="annotated" /><category term="ai" /><category term="kan" /><category term="kolmogorov-arnold" /><summary type="html"><![CDATA[An annotated guide to the Kolmogorov-Arnold Network]]></summary></entry><entry><title type="html">Highlights of NeurIPS 2023 from Reading All 3584 Abstracts</title><link href="https://alexzhang13.github.io/blog/2024/neurips2023/" rel="alternate" type="text/html" title="Highlights of NeurIPS 2023 from Reading All 3584 Abstracts" /><published>2024-01-09T00:00:00+00:00</published><updated>2024-01-09T00:00:00+00:00</updated><id>https://alexzhang13.github.io/blog/2024/neurips2023</id><content type="html" xml:base="https://alexzhang13.github.io/blog/2024/neurips2023/"><![CDATA[<h1 id="introduction">Introduction</h1>
 <p>To celebrate the end of my graduate school application deadlines and finals week disaster, I decided
 to spend my winter break <b>going through and reading every single abstract of the accepted papers
 in the NeurIPS 2023</b> (which I unfortunately couldn’t attend). It was a long and sometimes mind-numbing process (especially since the TeX wasn’t rendering on the <a href="neurips.cc">neurips.cc</a> website), but it was really cool to see all these works and ideas that I had no idea were being done. Luckily, I am somewhat familiar with quite a number of these papers because they popped off on <a href="https://arxiv.org/list/cs.AI/recent">arXiv</a> or
@@ -1106,7 +1106,7 @@ I ended up searching up so many terms, I eventually started keeping track of the
 curious reader wants to know at the bottom of this post.</p>
 <h2 id="the-overall-vibes">The Overall Vibes</h2>
 <figure>
-<img src="/assets/img/neurips2023.png" width="400" alt="Visualization of NeurIPS 2023"/>
+<img src="/assets/img/neurips2023.png" width="400" alt="Visualization of NeurIPS 2023" />
 <figcaption>Visualization generated from <a href="https://neurips2023.vizhub.ai/?ref=blog.roboflow.com&amp;brushed=%255B%255B14.600000381469727%252C-10%255D%252C%255B798.7249755859375%252C796.664306640625%255D%255D">here.</a></figcaption>
 </figure>
 <p>2023 was a great year for AI (generative models especially), and the number of submissions to
@@ -1129,7 +1129,7 @@ interests of the NLP community for the past year even though a lot of these work
 <ol>
 <li><strong>Reasoning.</strong> How can we apply algorithms or intuitions to fine-tune
 LLMs to be better planners, reasoners, etc. like in <d-cite key="phan2023training"></d-cite>? Furthermore, how can we explicitly improve their reasoning capabilities without gradient updates like in <d-cite key="yao2023tree"></d-cite>?</li>
-<li><strong>Logical Reasoning.</strong> Can LLMs be used for logical tasks like mathematics <d-cite key="zhang2023evaluating,frieder2023mathematical"></d-cite> and coding <d-cite key="yang2023intercode"></d-cite>? What are the pitfalls and potential solutions? We are interested in analyzing the limits of their abilities, as well as understand why and when they fail <d-cite key="hanna2023does"></d-cite>.</li>
+<li><strong>Logical Reasoning.</strong> Can LLMs be used for logical tasks like mathematics <d-cite key="zhang2023evaluating,frieder2023mathematical"></d-cite>  and coding <d-cite key="yang2023intercode"></d-cite>? What are the pitfalls and potential solutions? We are interested in analyzing the limits of their abilities, as well as understand why and when they fail <d-cite key="hanna2023does"></d-cite>.</li>
 <li><strong>Agents.</strong> Can LLMs be considered cognitive agents? That is, can we
 equip them with capabilities (tools, externals APIs <d-cite key="schick2023toolformer"></d-cite>, etc.) such that they can interact with environments through text generation? Furthermore, can they interact, think, and reflect in an anthropomorphic way? <d-cite key="madaan2023selfrefine,shinn2023reflexion"></d-cite></li>
 <li><strong>Efficiency.</strong> A key bottleneck in autoregressive LLM inference on GPUs is data movement, so research into circumventing this issue by exploiting parallelism and cached data is key (e.g. speculative decoding) <d-cite key="jin2023s3,kim2023speculative,sun2023spectr,zhu2023optimal"></d-cite>. Furthermore, can we improve the speed and cost of both training and inference on LLMs at both a systems-level (e.g. take advantage of properties of GPU memory footprints and throughput speeds) and model-level (low-rank fine-tuning, adaptors, sparsity, etc.) <d-cite key="portes2023mosaicbert,pagliardini2023faster,dettmers2023qlora"></d-cite>?</li>
@@ -1158,7 +1158,7 @@ experiments use GPT-J <d-footnote>https://huggingface.co/docs/transformers/model
 <li><strong>RapidBERT: Pretraining BERT from Scratch for $20</strong> <d-cite key="portes2023mosaicbert"></d-cite>: This paper is kind of crazy… With lots of modern tricks (FlashAttention<d-cite key="dao2022flashattention"></d-cite>, ALiBi<d-cite key="press2022train"></d-cite>, low-precision layernorm, etc.) they can pre-train a BERT with the same performance as the original in just 9 hours on an A100. I think it goes to show far how we’ve gone in optimizing our language models. It is also important to note that they use a more modern scraped dataset in this paper (C4 <d-footnote>https://github.com/allenai/allennlp/discussions/5056</d-footnote>) for pre-training.</li>
 <li><strong>Scaling Data-Constrained Language Models</strong> <d-cite key="muennighoff2023scaling"></d-cite>: Understanding the relationship between model scale and data scale is important, and this paper looks into scaling laws under limited amounts of unique data. In their experiments, they found that repeating data during training works but diminishes in performance compared to using completely unique data. As an aside, their results focus on cross-entropy loss, but with any work that focuses on CE loss, it is important to distinguish inherent entropy in the data and the actual performance gap you want to mitigate<d-footnote>https://arxiv.org/abs/2307.15936</d-footnote>.</li>
 <li><strong>Collaborative Alignment of NLP Models</strong><d-cite key="khani2023collaborative"></d-cite>: We have been conditioned to use single, huge foundation models because they work well in practice, but this paper looks into whether the learning of several, concept-aligned models with some meta-chooser on top actually works just as well. The primary benefit is the ability to modularize and parallelize LLMs, making them more flexible and also potentially faster.</li>
-<li><strong>Hard Prompts Made Easy: Gradient-Based Discrete Optimization for Prompt Tuning and Discovery.</strong> <d-cite key="wen2023hard"></d-cite>: You can sort of think of (hard) prompts as parameters to an LLM that transferrable to other LLMs (e.g. If I prompt GPT-4 with “Explain Newton’s laws like I’m 5”, I expect LLAMA 2 to answer similarly). In the case of text-to-image models, the images we get are often not exactly what we want (there are various reasons for this we discuss in the multi-modal section!). This work is basically a way to steer text prompts with gradient-based optimization so they generate the images you want.</li>
+<li><strong>Hard Prompts Made Easy: Gradient-Based Discrete Optimization for Prompt Tuning and Discovery.</strong>   <d-cite key="wen2023hard"></d-cite>: You can sort of think of (hard) prompts as parameters to an LLM that transferrable to other LLMs (e.g. If I prompt GPT-4 with “Explain Newton’s laws like I’m 5”, I expect LLAMA 2 to answer similarly). In the case of text-to-image models, the images we get are often not exactly what we want (there are various reasons for this we discuss in the multi-modal section!). This work is basically a way to steer text prompts with gradient-based optimization so they generate the images you want.</li>
 <li><strong>OpenAssistant Conversations - Democratizing Large Language Model Alignment</strong> <d-cite key="kopf2023openassistant"></d-cite>: So I actually followed this project on YouTube through Yannic Kilcher’s channel <d-footnote>https://youtube.com/yannickilcher</d-footnote>, and the central idea is to open-source the data required for RLHF because its extremely expensive to curate 60k+ human preference samples. I believe that open-source communities are extremely important for AI, and it’s exciting to see them produce extremely useful projects like this one. Because it is open-source, a large chunk of the paper discusses quality control and reducing “bad” or “toxic” data.</li>
 <li><strong>Direct Preference Optimization: Your Language Model is Secretly a Reward Model</strong> <d-cite key="rafailov2023direct"></d-cite>: For a while, the standard preference-alignment approach was to learn a reward model over preference data and fine-tune an LLM with RL on this reward model (RLHF). The issue with this approach is that RL is generally quite unstable and hard to work with, so this paper first motivates re-parameterizing the RLHF objective into a new objective that we can directly minimize. I’m not actually sure how well this works relative to RLHF in practice because I’ve never had access to these tools, but it is an RL-free alternative to preference-based alignment.</li>
 </ol>
@@ -1202,7 +1202,7 @@ samples to use with the standard contrastive loss during fine-tuning.</li>
 </ol>
 <figure>
 <center>
-<img src="/assets/img/oh2023geodesic.png" style="width:60%" alt="Visualization of CLIP embedding space."/>
+<img src="/assets/img/oh2023geodesic.png" style="width:60%" alt="Visualization of CLIP embedding space." />
 </center>
 </figure>
 <p>I’m curious because in the past, isotropic properties of “word embeddings” was thought to be a
@@ -1218,7 +1218,7 @@ constrain this didn’t turn out to be that useful. I wonder how that applies he
 </ol>
 <h3 id="transformers-interesting-papers">[<span style="color:orange">Transformers</span>] Interesting Papers</h3>
 <ol>
-<li><strong>Faith and Fate: Limits of Transformers on Compositionality</strong> <d-cite key="dziri2023faith"> </d-cite>: It has always unclear how good Transformers are at compositional reasoning, and this paper tries to uncover this question in a systematic way. As in, they literally break down each task (they are mostly computational tasks like multiplication and dynamic programming puzzles) into a computation graph and train their models in a bunch of different ways, ultimately concluding that Transformers are good at pattern matching reasoning chains, but not necessarily extrapolating reasoning itself.</li>
+<li><strong>Faith and Fate: Limits of Transformers on Compositionality</strong>  <d-cite key="dziri2023faith"> </d-cite>: It has always unclear how good Transformers are at compositional reasoning, and this paper tries to uncover this question in a systematic way. As in, they literally break down each task (they are mostly computational tasks like multiplication and dynamic programming puzzles) into a computation graph and train their models in a bunch of different ways, ultimately concluding that Transformers are good at pattern matching reasoning chains, but not necessarily extrapolating reasoning itself.</li>
 <li><strong>Geometric Algebra Transformer</strong> <d-cite key="brehmer2023geometric"> </d-cite>: This paper is super cool and really well written. It’s a fairly non-traditional work that enforces equivariance with respect E(3) <d-footnote>https://en.wikipedia.org/wiki/Euclidean_group</d-footnote>, which is all linear combinations of translations, rotations, and reflections of 3D Euclidean space. This is particularly useful for learning representations of geometric data, and they apply their Transformer to a downstream planning task and demonstrate that it still works even when we don’t want to enforce this constraint.</li>
 <li><strong>Pretraining Task Diversity and The Emergence of Non-Bayesian In-context Learning for Regression</strong><d-cite key="raventós2023pretraining"> </d-cite>: We’ve always been curious how well models generalize to information not present in the training data, but this paper takes this question with a bit more abstraction, examining the effectiveness of in-context learning on tasks not present in the training data. They propose a “task diversity threshold” and claim that in-context learning emerges if the pre-training data is sufficiently diverse.</li>
 <li><strong>Fast Attention Requires Bounded Entries</strong><d-cite key="alman2023fast"> </d-cite>: Theoretically-motivated result on why we want entries in the attention matrix to be relatively small with respect to the matrix size if we want to speed up computations through approximation algorithms. It’s a pretty neat work, and I don’t necessarily think it’s intuitively obvious why this holds.</li>
@@ -1332,7 +1332,7 @@ I noticed some interest in human-centric perception, as we ideally want vision m
 <p>As much as we like scaling models, building smaller models that can run on accessible hardware is extremely important for the growth of our community. This section is mostly referring to scaling down models so they can run <strong>on inference time</strong> on smaller hardware, which is a matter of memory efficiency. TinyML <d-footnote>A whole field of study is on ultra-low power ML: https://www.tinyml.org</d-footnote> works take it a step further and try to deploy these models on embedded systems and micro-controllers <d-cite key="liang2023mcuformer"></d-cite>. The three primary methods are weight quantization<d-footnote>Weight quantization involves using a lower-precision datatype for representing weights, which can reduce memory complexity by a multiplicative factor.</d-footnote>, pruning<d-footnote>There is extensive literature on network pruning, and it is actually quite complex. Pruning is literally taking out parts of the network (hence the name), but choosing what to take it is important. It is also important to select the time that you prune (before training, during training, after training), as this affects the performance and overhead of the pruning process. </d-footnote>, and knowledge distillation<d-footnote>Knowledge distillation involves taking a larger model and cloning its behavior in a smaller model, also known as "distilling". The idea is that a large models are often over-parameterized (there are benefits for training in this way), so once we have the model trained, we can cut down on its capacity by training a smaller model.</d-footnote>.</p>
 <ol>
 <li><strong>Memory Reduction Techniques.</strong> We generally are intered in tradeoffs for different memory reduction schemes such as pruning and quantization. In <d-cite key="kuzmin2023pruning"></d-cite>, they claim that quantization is almost always better unless you care about extreme compression. Similar to older work doing weight quantization for MLPs and CNNs, newer works at this conference do it for transformers <d-cite key="xi2023training,dong2023packqvit"></d-cite>.</li>
-<li><strong>Lottery Ticket Hypothesis (LTH)</strong><d-footnote>The lottery ticket hypothesis is the notion that dense neural networks contain a much smaller subnetwork that accounts for most of the performance. Finding these subnetworks through pruning would, in theory, preserve performance while significantly reducing memory. Read more from the original paper: https://arxiv.org/abs/1803.03635 </d-footnote><strong>.</strong> Following the original LTH, we want to understand what metrics (e.g. weight magnitude, gradient flow) and structure are useful for pruning modern architectures like LLMs, but this also depends on what we are pruning for. In <d-cite key="kurtic2023ziplm"></d-cite> they prune LLMs based on run-time bottlenecks for inference speed-ups, while in <d-cite key="ma2023llmpruner"></d-cite> they focus on shrinking the model. Meanwhile, in convolutional neural networks, pruning based on empirics has been widely studied, so <d-cite key="dacunha2023polynomially"></d-cite> provide some theoretical motivation into better pruning based on the structure of the model.</li>
+<li><strong>Lottery Ticket Hypothesis (LTH)</strong><d-footnote>The lottery ticket hypothesis is the notion that dense neural networks contain a much smaller subnetwork that accounts for most of the performance. Finding these subnetworks through pruning would, in theory, preserve performance while significantly reducing memory. Read more from the original paper: https://arxiv.org/abs/1803.03635 </d-footnote><strong>.</strong>  Following the original LTH, we want to understand what metrics (e.g. weight magnitude, gradient flow) and structure are useful for pruning modern architectures like LLMs, but this also depends on what we are pruning for. In <d-cite key="kurtic2023ziplm"></d-cite> they prune LLMs based on run-time bottlenecks for inference speed-ups, while in <d-cite key="ma2023llmpruner"></d-cite> they focus on shrinking the model. Meanwhile, in convolutional neural networks, pruning based on empirics has been widely studied, so <d-cite key="dacunha2023polynomially"></d-cite> provide some theoretical motivation into better pruning based on the structure of the model.</li>
 <li><strong>Knowledge Distillation</strong>. Knowledge distillation (KD) is an approach for trying to force a small student model to mimic the output probabilities of a larger teacher model. KD has seen a wide array of techniques being used to preserve functionality of the teacher in the student, and many empirical experiments have been done in the past to evaluate the lower-bound capacity of student models. Nevertheless, the works at this conference were pretty unique. In <d-cite key="huang2023knowledge"></d-cite> they observe that student models have noisier features and attempt to de-noise them using diffusion. In <d-cite key="gupta2023concept"></d-cite>, they motivate “concepts” in intermediate layers as an auxiliary signal for distillation. Finally, <d-cite key="ojha2023knowledge"></d-cite> investigates whether properties like adversarial robustness, invariances, and generalization are transferred effectively during distillation.</li>
 </ol>
 <h3 id="memory-reduction-interesting-papers">[<span style="color:orange">Memory Reduction</span>] Interesting Papers</h3>
@@ -1517,4 +1517,4 @@ also ended up looking into more and forgot to put them in this list, but in case
   month   = "Jan",
   url     = "https://alexzhang13.github.io/blog/2024/neurips2023/"
 }
-</code></pre></div></div>]]></content><author><name>Alex Zhang</name></author><category term="blog"/><category term="summary"/><category term="generative"/><category term="ai"/><summary type="html"><![CDATA[Just me reading through every paper abstract...]]></summary></entry></feed>
+</code></pre></div></div>]]></content><author><name>Alex Zhang</name></author><category term="blog" /><category term="summary" /><category term="generative" /><category term="ai" /><summary type="html"><![CDATA[Just me reading through every paper abstract...]]></summary></entry></feed>
