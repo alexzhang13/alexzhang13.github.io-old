@@ -141,7 +141,7 @@ In this section, we describe a barebones, minimal KAN model. The goal is to show
 ### Preliminaries
 If you're using Colab, you can run the following as if they were code blocks. This implementation is also quite GPU-unfriendly, so a CPU will suffice.
 
-<d-code block language="python">
+<d-code block language="python" style="font-size:0.7em">
 # Code was written in Python 3.11.9, but most usable versions of Python and torch suffice.
 !pip install torch==2.3.1
 !pip install numpy==1.26.4

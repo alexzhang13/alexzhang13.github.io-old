@@ -239,7 +239,7 @@ defaults:
 # -----------------------------------------------------------------------------
 
 jekyll-minifier:
-  exclude: ['robots.txt']
+  exclude: ['robots.txt', '_posts/2024-07-1-annotated-kan.md']
   uglifier_args:
     harmony: true
 
