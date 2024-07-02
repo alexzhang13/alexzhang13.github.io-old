@@ -1,7 +1,7 @@
 ---
 layout: distill
 title: The Annotated Kolmogorov-Arnold Network (KAN)
-date: 2024-06-20
+date: 2024-07-01
 nav: true
 tags: annotated_kan
 categories: for fun
