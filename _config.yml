@@ -245,7 +245,10 @@ jekyll-minifier:
   remove_multi_spaces: false         # Default: true
   remove_comments: false             # Default: true
   remove_intertag_spaces: false      # Default: false
-  remove_http_protocol: true
+  remove_http_protocol: false
+  compress_css: false
+  compress_javascript: false
+  compress_json: false
   uglifier_args:
     harmony: true
 
